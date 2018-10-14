@@ -128,9 +128,9 @@ class Zeros:
 
 if __name__=="__main__":
     x=Derivada(m.exp, "extrapolada")
-    x.calc(1)
+    print(x.calc(1))
     y=Zeros(m.cos, "bisectriz", error=0.000001)
-    y.zero((3,5))
+    print(y.zero((3,5)))
         
         
         
