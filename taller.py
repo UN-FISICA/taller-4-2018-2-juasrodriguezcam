@@ -27,6 +27,7 @@ class Derivada:
     
     def segunda(self,x0):
         der=(self.f(x0+self.dx)+self.f(x0-self.dx)-2*self.f(x0))/(self.dx*self.dx)
+        return der
     
     def calc(self,x):
         if self.metodo=="adelante":
@@ -35,6 +36,8 @@ class Derivada:
             calc=self.central(x)
         elif self.metodo=="extrapolada":
             calc=self.extrapolada(x)
+        elif self.metodo=="segunda":
+            calc=self.segunda(x)
         return calc
     
 class Zeros:
