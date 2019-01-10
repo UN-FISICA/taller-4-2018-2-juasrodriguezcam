@@ -25,6 +25,9 @@ class Derivada:
         der=(4*self.central(x0)-self.central(x0))/3 
         return der
     
+    def segunda(self,x0):
+        der=(self.f(x0+self.dx)+self.f(x0-self.dx)-2*self.f(x0))/(self.dx*self.dx)
+    
     def calc(self,x):
         if self.metodo=="adelante":
             calc=self.adelante(x)
